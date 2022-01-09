@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modalstyles.css">
+    <script src="https://kit.fontawesome.com/5c9ecc26a4.js" crossorigin="anonymous"></script>
+    <title>Bubble sort visualization</title>
+    <script src="bubbleSort.js" defer></script>
+    <script src="modalWindow.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Bubble sort</h1>
+        <nav class="nav">
+            <button class="nav__button" id="guide">Инструкция по пользованию страницей</button>
+            <div>
+                <input type="range" min="5" max="40" value="20" class="slider" id="arrayLength">
+                <span>N:</span>
+                <span id="arrayValue"></span>
+            </div>
+            <div>
+                <input type="range" min="50" max="400" value="150" class="slider reversedRange" id="arraySpeed">
+                <span>Скорость сортировки</span>
+            </div>
+            <button class="nav__button" id="random">Рандом</button>
+            <button class="nav__button" id="sort">Сортировать!</button>
+        </nav>
+        <div class="array"></div> <!-- Массив,  в котором будут генерироваться элементы-->
+    </div>
+    <div class="alert hide" id="doneAlert">
+        <!-- Popup, уведомляющий о завершении сортировки-->
+        <span class="alert__check-mark">&#10003;</span>
+        <span class="alert__msg">Готово!</span>
+    </div>
+</body>
+
+</html>
