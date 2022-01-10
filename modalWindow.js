@@ -1,3 +1,4 @@
+let openModal;
 class ModalWindow {
     constructor() {
         this.container = document.createElement('div');
@@ -47,7 +48,7 @@ class ModalWindow {
 
 const openGuide = document.querySelector("#guide");
 openGuide.addEventListener("click", () => {
-    const openModal = new ModalWindow();
+    openModal = new ModalWindow();
     openModal.open();
 });
 

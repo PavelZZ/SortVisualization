@@ -9,6 +9,15 @@ const elements = new BubbleSort();
 let N = slider.value;
 elements.generateArray();
 
+//Открытие инструкции при запуске страницы
+// При первом запуске вкладки со страницей появляется инструкция
+if (!sessionStorage.getItem("open")) {
+    openModal = new ModalWindow();
+    openModal.open();
+}
+
+sessionStorage.setItem("open", 1);
+
 slider.oninput = function () {
     outputN.innerHTML = this.value;
 }
